@@ -441,6 +441,7 @@ html {
 .dialog {
   position: absolute;
   filter: drop-shadow(0px 2px 46px hsla(0, 0%, 0%, 0.4));
+  animation: scaleUp 3s ease-in-out infinite;
 }
 
 .dialog-1 {
