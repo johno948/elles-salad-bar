@@ -852,19 +852,9 @@ footer {
 }
 
 /* Left Section: Address and Logo */
-.footer-left {
-  flex: 0 1 250px; /* Ensures the left section is responsive */
-  text-align: left;
-}
-
-.footer-brand {
-  display: block;
-  margin-bottom: 10px;
-}
-
 .footer-address h4 {
   font-size: 18px;
-  color: #1B263B;
+  color: black;
   margin-bottom: 10px;
 }
 
@@ -883,7 +873,7 @@ footer {
 
 .connect-text {
   font-size: 18px; /* Font size for the heading */
-  color: #1B263B; /* Saffron color for the heading */
+  color: black; /* Saffron color for the heading */
   text-align: center; /* Center the text */
   margin-bottom: 10px; /* Adds spacing below */
   font-weight: bold;
@@ -898,12 +888,12 @@ footer {
 
 .social-link ion-icon {
   font-size: 20px;
-  color: var(--red-orange-crayola); /* Retained color */
+  color: black; /* Retained color */
   transition: all 0.25s ease;
 }
 
 .social-link ion-icon:hover {
-  color: var(--saffron); /* Change to saffron on hover */
+  color: gray; /* Change to saffron on hover */
 }
 
 /* Right Section: Google Map */
