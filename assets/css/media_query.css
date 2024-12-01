@@ -87,6 +87,8 @@
   .footer-bottom {
     max-width: var(--mw);
     margin-inline: auto;
+    padding-left: 2px;
+    margin-top: auto;
   }
 
 }
