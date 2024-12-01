@@ -1099,3 +1099,9 @@ footer {
     margin-bottom: 20px; /* Add margin at the bottom */
   }
 }
+
+.delivery-info, .footer-map, .footer-links {
+  gap: 1px;
+    color: #333333;
+    margin-bottom: 10px;
+}
