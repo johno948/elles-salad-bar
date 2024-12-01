@@ -99,6 +99,7 @@ html {
   font-size: 14px;
   font-weight: 500;
   transition: var(--default-transition);
+  border-radius: 4px;
 }
 
 .btn:hover { filter: saturate(1.05) brightness(1.05); }
@@ -748,7 +749,10 @@ html {
   color: var(--saffron);
 }
 
-.product .btn-primary { margin-inline: auto; }
+.product .btn-primary { 
+  margin-inline: auto;
+  border-radius: 4px;
+}
 
 
 
