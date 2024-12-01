@@ -831,7 +831,8 @@ html {
 @media screen and (max-width: 1680px) {
   footer {
     max-width: 1360px; /* Limit width for large screens */
-    padding: 0 20px;   /* Add padding for better alignment */
+    padding: 0 20px; /* Add padding for better alignment */
+    padding-bottom: 12px;
   }
 }
 
@@ -844,117 +845,168 @@ footer {
   background-color: #f9f9f9; /* Optional: Light background for better contrast */
 }
 
-/* Footer Wrapper */
 .footer-wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start; /* Align sections to the top */
-  gap: 30px; /* Increased gap for more spacing */
-  padding: 2rem 0;
-  margin: 0 auto; /* Center the wrapper horizontally */
-  max-width: 1280px; /* Add max width for better layout on large screens */
+  justify-content: space-between;
+  gap: 20px;
+  padding: 2rem;
+  background-color: #ffffff; /* White background */
+  border-top: 2px solid #d9d9d9; /* Soft border for separation */
 }
 
-/* Left Section: Address and Logo */
-.footer-left {
-  flex: 0 1 250px; /* Ensure a fixed width for the left section */
-  text-align: left;
+/* Sections */
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1 1 300px;
 }
 
-.footer-brand {
+/* Logo and Tagline */
+.footer-left .footer-brand {
   display: block;
-  margin-bottom: 15px; /* Adjust spacing for better layout */
+  margin-bottom: 10px;
 }
 
-.footer-address h4 {
-  font-size: 20px; /* Slightly larger font for headings */
-  color: var(--space-cadet);
-  margin-bottom: 12px;
-}
-
-.footer-address p {
-  color: var(--rhythm);
-  font-size: var(--fs-4);
-  line-height: 1.6; /* Increased line-height for better readability */
-  letter-spacing: 0.5px;
-}
-
-/* Center Section: Social Links */
-.footer-center {
-  flex: 1; /* Ensures center section is flexible */
-  text-align: center;
-}
-
-.connect-text {
-  font-size: 20px; /* Slightly larger heading */
-  color: var(--space-cadet);
-  text-align: center; /* Force center alignment */
-  margin-bottom: 15px; /* Increased spacing below */
+.footer-tagline {
+  font-size: 1.2rem;
+  color: #002855; /* Dark blue for tagline */
   font-weight: bold;
 }
 
-/* Social Links */
-.social-link {
-  display: flex;
-  justify-content: center; /* Center the social icons */
-  gap: 20px; /* Increase spacing between icons */
+/* Address, Contact, and Hours */
+.footer-address,
+.footer-contact,
+.footer-hours {
+  margin-bottom: 20px;
+  color: #333333; /* Neutral black for text */
 }
 
-.social-link ion-icon {
-  color: var(--rhythm);
-  font-size: var(--fs-4);
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+.footer-contact a {
+  color: #002855; /* Dark blue for links */
+  text-decoration: none;
 }
 
-.social-link ion-icon:hover {
-  color: black; /* Change icon color on hover */
+.footer-contact a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Lighter blue for hover effect */
 }
 
-/* Right Section: Google Map */
-.footer-right {
-  flex: 1; /* Makes it flexible */
-  text-align: right;
+/* Social Media Links */
+.social-links {
+  display: flex; /* Use flexbox to align the icons horizontally */
+  justify-content: center; /* Center the icons horizontally */
+  gap: 20px; /* Add some space between the icons */
+  margin-bottom: 20px; /* Optional: Add space below the icons */
 }
 
+.social-links ion-icon {
+  font-size: 1.5rem; /* Size of the icons */
+  color: #6c757d; /* Default icon color */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links ion-icon:hover {
+  color: #002855; /* Change color on hover */
+  transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* Newsletter Form */
+.newsletter input[type="email"] {
+  padding: 10px;
+  font-size: 1rem;
+  margin-right: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.newsletter button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #002855; /* Dark blue for button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #0056b3; /* Brighter blue for hover */
+}
+
+/* Map and Quick Links */
 .footer-map iframe {
   width: 100%;
-  max-width: 300px;
-  height: 200px;
+  border: none;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for focus */
 }
 
-/* Responsive Footer Layout */
-@media screen and (max-width: 768px) {
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #002855; /* Dark blue for links */
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Lighter blue for hover */
+}
+
+/* Sustainability and Delivery */
+.footer-extra {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #d9d9d9; /* Light border for separation */
+  color: #333333; /* Neutral black */
+}
+
+.footer-extra a {
+  color: #002855; /* Dark blue for links */
+  text-decoration: none;
+}
+
+.footer-extra a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Lighter blue for hover */
+}
+
+/* Responsive Footer for smaller screens */
+@media screen and (max-width: 1024px) {
   .footer-wrapper {
     flex-direction: column; /* Stack sections vertically */
-    align-items: center; /* Center all sections */
-    text-align: center;
-    gap: 40px; /* Increase gap between sections */
+    align-items: center; /* Center the sections */
+    gap: 40px; /* More space between stacked sections */
   }
 
   .footer-left,
   .footer-center,
   .footer-right {
-    flex: 1 1 100%; /* Make each section full-width */
-  }
-
-  .footer-right {
-    text-align: center; /* Center-align map for smaller screens */
+    flex: 1 1 100%; /* Each section takes full width */
   }
 
   .footer-map iframe {
-    max-width: 100%; /* Ensure the map is responsive */
-    height: 200px; /* Slightly taller map for smaller screens */
+    max-width: 100%; /* Ensure the map fits the container */
+    height: 200px; /* Ensure the map height is consistent */
   }
-}
 
-/* Copyright */
-footer .copyright {
-  text-align: center; /* Center the copyright text */
-  font-size: 14px; /* Slightly larger font for readability */
-  color: gray;
-  margin-top: 20px;
-  padding-top: 10px;
-  border-top: 1px solid #e0e0e0; /* Separator for copyright section */
+  .social-links ion-icon {
+    font-size: 1.3rem; /* Slightly smaller icons for mobile */
+  }
+
+  .newsletter input[type="email"],
+  .newsletter button {
+    width: 100%; /* Make form inputs full width on smaller screens */
+    margin-bottom: 10px; /* Add space between inputs and button */
+  }
 }
