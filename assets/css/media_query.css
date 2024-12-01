@@ -83,7 +83,8 @@
   .services,
   .product,
   .testimonials,
-  .footer-wrapper {
+  .footer-wrapper,
+  .footer-bottom {
     max-width: var(--mw);
     margin-inline: auto;
   }
