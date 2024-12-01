@@ -917,7 +917,7 @@ footer {
 .newsletter input[type="email"] {
   padding: 10px;
   font-size: 1rem;
-  margin-bottom: 10px; /* Adds space below the input field */
+  margin-bottom: 6px; /* Adds space below the input field */
   border: 1px solid #ced4da;
   border-radius: 4px;
   width: 100%; /* Optional: Ensures the input spans full width */
@@ -1107,7 +1107,7 @@ footer {
     margin-bottom: 10px;
 }
 
-.footer-extra .delivery-info {
+.delivery-info {
   margin-top: 20px; /* Adds space above the "Delivery Options" text */
   font-size: 1rem;
   line-height: 1.5;
