@@ -828,37 +828,27 @@ html {
 
 /* Footer Wrapper */
 
-@media screen and (max-width: 1680px) {
-  footer {
-    max-width: 1360px; /* Limit width for large screens */
-    padding: 0 20px; /* Add padding for better alignment */
-    padding-bottom: 12px;
-  }
-}
-
 footer {
   margin: 0 auto;
-  margin-top: 0;
   width: 100%;
   padding-top: 3px;
-  border-top: 2px solid #ffeeee;
-  background-color: #f9f9f9; /* Optional: Light background for better contrast */
+  border-top: 1cap solid #ffeeee;
+  background-color: #f9f9f9;
+  padding: 2rem; /* Added padding to footer */
 }
 
 .footer-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
-  padding: 2rem;
-  background-color: #ffffff; /* White background */
-  border-top: 2px solid #d9d9d9; /* Soft border for separation */
+  gap: 20px; /* Ensure gap is applied between items */
+  background-color: #ffffff;
+  border-top: 2px solid #d9d9d9;
+  padding: 2rem; /* Added padding */
 }
 
 /* Sections */
-.footer-left,
-.footer-center,
-.footer-right {
+.footer-left, .footer-center, .footer-right {
   flex: 1 1 300px;
 }
 
@@ -870,16 +860,14 @@ footer {
 
 .footer-tagline {
   font-size: 1.2rem;
-  color: #002855; /* Dark blue for tagline */
+  color: #002855; /* Dark blue */
   font-weight: bold;
 }
 
 /* Address, Contact, and Hours */
-.footer-address,
-.footer-contact,
-.footer-hours {
+.footer-address, .footer-contact, .footer-hours {
   margin-bottom: 20px;
-  color: #333333; /* Neutral black for text */
+  color: #333333;
 }
 
 .footer-contact a {
@@ -889,29 +877,45 @@ footer {
 
 .footer-contact a:hover {
   text-decoration: underline;
-  color: #0056b3; /* Lighter blue for hover effect */
+  color: #0056b3; /* Lighter blue for hover */
 }
 
 /* Social Media Links */
 .social-links {
-  display: flex; /* Use flexbox to align the icons horizontally */
-  justify-content: center; /* Center the icons horizontally */
-  gap: 20px; /* Add some space between the icons */
-  margin-bottom: 20px; /* Optional: Add space below the icons */
+  margin-bottom: 20px;
 }
 
-.social-links ion-icon {
-  font-size: 1.5rem; /* Size of the icons */
-  color: #6c757d; /* Default icon color */
+.social-links h4 {
+  color: #333333;
+  margin-bottom: 10px; /* Added margin for spacing */
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  font-size: 2rem; /* Larger icon size */
+  color: #6c757d;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.social-links ion-icon:hover {
-  color: #002855; /* Change color on hover */
-  transform: scale(1.2); /* Zoom effect on hover */
+.social-icons a:hover {
+  color: #002855;
+  transform: scale(1.2); /* Zoom effect */
 }
 
 /* Newsletter Form */
+.newsletter {
+  margin-top: 20px;
+}
+
+.newsletter h4 {
+  color: #333333;
+  margin-bottom: 10px;
+}
+
 .newsletter input[type="email"] {
   padding: 10px;
   font-size: 1rem;
@@ -923,7 +927,7 @@ footer {
 .newsletter button {
   padding: 10px 15px;
   font-size: 1rem;
-  background-color: #002855; /* Dark blue for button */
+  background-color: #002855;
   color: white;
   border: none;
   border-radius: 4px;
@@ -932,7 +936,7 @@ footer {
 }
 
 .newsletter button:hover {
-  background-color: #0056b3; /* Brighter blue for hover */
+  background-color: #0056b3;
 }
 
 /* Map and Quick Links */
@@ -940,7 +944,7 @@ footer {
   width: 100%;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for focus */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .footer-links ul {
@@ -954,12 +958,12 @@ footer {
 
 .footer-links a {
   text-decoration: none;
-  color: #002855; /* Dark blue for links */
+  color: #002855;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
-  color: #0056b3; /* Lighter blue for hover */
+  color: #0056b3;
 }
 
 /* Sustainability and Delivery */
@@ -967,46 +971,132 @@ footer {
   text-align: center;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #d9d9d9; /* Light border for separation */
-  color: #333333; /* Neutral black */
+  border-top: 1px solid #d9d9d9;
+  color: #333333;
 }
 
 .footer-extra a {
-  color: #002855; /* Dark blue for links */
+  color: #002855;
   text-decoration: none;
 }
 
 .footer-extra a:hover {
   text-decoration: underline;
-  color: #0056b3; /* Lighter blue for hover */
+  color: #0056b3;
+}
+
+/* Desktop Footer: Gap for Visit Us and Quick Links */
+@media screen and (min-width: 1025px) {
+  .footer-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px; /* Ensure proper gap between Visit Us and Quick Links */
+  }
+
+  .footer-map,
+  .footer-links {
+    width: 48%; /* Make sure each section takes 48% of the width to leave space between */
+    margin-bottom: 20px;
+  }
+
+  .footer-map iframe {
+    height: 200px; /* Adjust height to make map square */
+  }
+
+  /* Add margin for the "Visit Us" and "Quick Links" titles */
+  .footer-map h4,
+  .footer-links h4 {
+    margin-bottom: 15px; /* Add gap between title and content */
+  }
 }
 
 /* Responsive Footer for smaller screens */
 @media screen and (max-width: 1024px) {
   .footer-wrapper {
-    flex-direction: column; /* Stack sections vertically */
-    align-items: center; /* Center the sections */
-    gap: 40px; /* More space between stacked sections */
+    flex-direction: column;
+    align-items: flex-start; /* Align all sections to the left */
+    gap: 40px;
+    padding: 2rem; /* Added padding for smaller screens */
   }
 
-  .footer-left,
-  .footer-center,
-  .footer-right {
-    flex: 1 1 100%; /* Each section takes full width */
+  .footer-left, .footer-center, .footer-right {
+    flex: 1 1 100%;
+  }
+
+  /* Ensure map and quick links take full width */
+  .footer-map,
+  .footer-links {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
   }
 
   .footer-map iframe {
-    max-width: 100%; /* Ensure the map fits the container */
-    height: 200px; /* Ensure the map height is consistent */
+    height: 200px;
   }
 
-  .social-links ion-icon {
-    font-size: 1.3rem; /* Slightly smaller icons for mobile */
+  /* Social Icons */
+  .social-icons a {
+    font-size: 1.3rem; /* Smaller icons on mobile */
   }
 
+  /* Form Inputs */
   .newsletter input[type="email"],
   .newsletter button {
-    width: 100%; /* Make form inputs full width on smaller screens */
-    margin-bottom: 10px; /* Add space between inputs and button */
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Titles and text aligned to the left */
+  .footer-address h4,
+  .footer-contact h4,
+  .footer-hours h4,
+  .social-links h4,
+  .newsletter h4,
+  .footer-links h4,
+  .footer-map h4 {
+    color: #333333; /* Same font color for all titles */
+    margin-left: 0; /* No margin on the left */
+    text-align: left; /* Align titles to the left */
+  }
+
+  /* Address, Contact, Hours sections */
+  .footer-address p,
+  .footer-contact p,
+  .footer-hours p,
+  .footer-links ul {
+    text-align: left;
+    margin-left: 0; /* Remove unnecessary margin */
+  }
+
+  /* Wrapper for Visit Us and Quick Links */
+  .footer-map,
+  .footer-links {
+    margin-top: 20px; /* Add margin between sections */
+    display: flex;
+    flex-direction: column; /* Ensure items are stacked vertically */
+    gap: 15px; /* Add a gap between items */
+  }
+
+  /* Gap between title and content */
+  .footer-address h4,
+  .footer-contact h4,
+  .footer-hours h4,
+  .footer-links h4,
+  .footer-map h4 {
+    margin-bottom: 15px; /* Add gap between title and content */
+  }
+
+  /* Make Visit Us and Quick Links aligned at flex-start */
+  .footer-map,
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  /* Add margin between "Visit Us" and "Quick Links" */
+  .footer-map {
+    margin-bottom: 20px; /* Add margin at the bottom */
   }
 }
